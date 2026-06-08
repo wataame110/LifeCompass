@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+    @apply bg-gray-50 text-gray-900 dark:bg-lc-dark-bg dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .lc-card {
+    @apply bg-white dark:bg-lc-dark-card rounded-2xl shadow-sm border border-gray-100 dark:border-lc-dark-border;
+  }
+  .lc-btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-lc-primary-600 hover:bg-lc-primary-700 text-white font-semibold transition-colors shadow-sm;
+  }
+  .lc-btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-lc-primary-600 text-lc-primary-600 hover:bg-lc-primary-50 dark:hover:bg-lc-primary-900/20 font-semibold transition-colors;
+  }
+  .lc-btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-lc-accent-500 hover:bg-lc-accent-600 text-white font-semibold transition-colors shadow-sm;
+  }
+  .lc-input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-lc-primary-500 focus:border-transparent transition-all;
+  }
+  .lc-select {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-lc-primary-500 appearance-none;
+  }
+  .lc-label {
+    @apply block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5;
+  }
+  .lc-ad-space {
+    @apply w-full bg-gray-50 dark:bg-gray-800/50 border border-dashed border-gray-300 dark:border-gray-600 rounded-xl flex items-center justify-center text-gray-400 text-sm min-h-[90px];
+  }
+}
